@@ -165,7 +165,12 @@ define Device/carambola2
   CONSOLE := ttyATH0,115200
   MTDPARTS := spi0.0:256k(u-boot)ro,64k(u-boot-env)ro,16000k(firmware),64k(art)ro
 endef
-TARGET_DEVICES += carambola2
+define Device/centipede
+$(Device/carambola2)
+  DEVICE_PROFILE := 8DEV CENTIPEDE
+  BOARDNAME = CENTIPEDE
+endef
+TARGET_DEVICES += carambola2 centipede
 
 define Device/cf-e316n-v2
   DEVICE_TITLE := COMFAST CF-E316N v2
