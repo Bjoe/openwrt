@@ -167,7 +167,7 @@ define Device/carambola2
 endef
 define Device/centipede
 $(Device/carambola2)
-  DEVICE_PROFILE := 8DEV CENTIPEDE
+  DEVICE_TITLE := 8devices Centipede
   BOARDNAME = CENTIPEDE
 endef
 TARGET_DEVICES += carambola2 centipede
